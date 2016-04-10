@@ -1,0 +1,92 @@
+.top-tab{
+    background: #909090;
+    height: 8.5em;
+    border-radius: 10px;
+    box-shadow: 10px 10px 10px black;
+}
+
+.left-tab{
+    display: inline-block;
+    float: left;
+    background: #909090;
+    height: 26em;
+    width: 8.5em;
+    margin-left: 2em;
+    margin-top: 1em;
+    border-radius: 10px;
+    box-shadow: 10px 10px 10px black;
+}
+
+.center-tab{
+    float: left;
+    display: inline-block;
+    background: #909090;
+    height: 35em;
+    margin-left: 2em;
+    width: 64em;
+/*    margin-left: 50%;
+    transform: translate(-50%,0);*/
+    margin-top: 1em;
+    border-radius: 10px;
+    box-shadow: 10px 10px 10px black;
+}
+
+.right-tab{
+    float: left;
+    display: inline-block;
+    background: #909090;
+    height: 26em;
+    width: 8.5em;
+    margin-left: 2em;
+    margin-top: 1em;
+    border-radius: 10px;
+    box-shadow: 10px 10px 10px black;
+}
+
+.left-tab img:hover{
+    border-style: solid;
+    border-color: red;
+    border-width: 0.35em;
+    border-radius: 5px
+}
+
+p{
+    padding-top: 1px;
+    margin-left: 0.5em;
+}
+
+.container{
+    width: 75%;
+    padding-top: 0.5em;
+    margin-left: 12.5%;
+}
+
+
+.text-tab{
+    margin-top: 32.6em;
+    position: fixed;
+    background: lightgreen;
+    margin-left: 12em;
+    height: 10.6em;
+    width: 32.5em;
+    border-radius: 10px;
+    box-shadow: 10px 10px 10px black;
+}
+
+.box {
+    background: white;
+    width: 30em;
+    height: 1.2em;
+    margin-bottom: 4em ;
+    margin-left: 0.7em;
+}
+.button {
+    width: 7em;
+    height: 2em;
+    border-radius: 1px;
+    margin-left: 0.7em;
+}
+.brick{
+    background-image: url("resources/brick.jpg");
+    background-repeat: repeat;
+}
