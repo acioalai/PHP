@@ -2,7 +2,7 @@
 
 function auth($login, $passwd)
 {
-    if (!$login || !$passwd || !($data = file_get_contents("./private/passwd")))
+    if (!$login || !$passwd || !($data = file_get_contents("../private/passwd")))
         return FALSE;
 
     $data = unserialize($data);
@@ -15,4 +15,5 @@ function auth($login, $passwd)
     }
     return FALSE;
 }
+
 ?>
