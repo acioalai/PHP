@@ -1,5 +1,7 @@
 <?php
 
+include '../header.php';
+
 function error($Msg, $var)
 {
     if ($var == 1) {

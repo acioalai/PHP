@@ -1,4 +1,5 @@
 <?php
+include '../header.php';
 
 function error($Msg)
 {
@@ -13,18 +14,20 @@ function add($user)
         foreach ($data as $item)
             if ($item["login"] === $user['login']) {
                 error("Exista deja un utilizator cu acest nume !");
-                header( 'Refresh: 5; URL=http://myshop.local.42.fr:8080/user/create.php' );
+                header( 'Refresh: 3; URL=http://myshop.local.42.fr:8080/user/create.php' );
             }
         $data[] = $user;
         file_put_contents("../private/passwd", serialize($data));
-        header( 'Refresh: 5; URL=http://myshop.local.42.fr:8080/login/login_html.php' );
+        error("Contul a fost creat cu succes !");
+        header( 'Refresh: 3; URL=http://myshop.local.42.fr:8080/login/login_html.php' );
     }
     else
     {
         mkdir("../private/");
         $data[] = $user;
         file_put_contents("../private/passwd", serialize($data));
-        header( 'Refresh: 5;URL=http://myshop.local.42.fr:8080/login/login_html.php') ;
+        error("Contul a fost creat cu succes !");
+        header( 'Refresh: 3;URL=http://myshop.local.42.fr:8080/login/login_html.php') ;
     }
 }
 
@@ -39,7 +42,7 @@ if (($_POST['login'] != null) && ($_POST['passwd'] != null) && ($_POST['submit']
 }
 else {
     error("Datele sunt gresite!");
-    header( 'Refresh: 5;URL=http://myshop.local.42.fr:8080/user/create.php' );
+    header( 'Refresh: 3;URL=http://myshop.local.42.fr:8080/user/create.php' );
 }
 
 ?>

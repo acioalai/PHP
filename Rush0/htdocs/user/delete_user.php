@@ -1,4 +1,5 @@
 <?php
+include '../header.php';
 
 function error($Msg)
 {
@@ -15,7 +16,6 @@ if (($_POST['login'] != null) && ($_POST['submit'] == "OK"))
         $sters = false;
         foreach ($data as $u)
         {
-            var_dump(1);
             if ($u['login'] == $_POST['login']){
                 array_splice($data, $i, 1);
                 error("Utilizatorul a fost sters");
