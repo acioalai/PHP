@@ -29,7 +29,7 @@ include './header.php';
 </head>
 <body>
 
-<form method="post" action="Items/add_item_tocart.php">
+<form method="post" action="items/add_item_tocart.php">
     <table align="center">
         <tr>
             <td><h2>Alege produsul: <input type="text" name="nume" value=""/></h2></td>

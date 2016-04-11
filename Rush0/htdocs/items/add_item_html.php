@@ -2,7 +2,7 @@
 
 session_start();
 
-include 'header.php';
+include '../header.php';
 ?>
 
 <html><body>
@@ -11,9 +11,9 @@ include 'header.php';
     <br/>
     Categorie: 
     <select name="categorie">
-        <option value="1">1</option>
-        <option value="2">2</option>
-        <option value="3">3</option>
+        <option value="1">Legume</option>
+        <option value="2">Fructe</option>
+        <option value="3">Carne</option>
     </select>
     <br/>
     Cantitate: <input type="text" name="cant" value=""/>
