@@ -1,0 +1,12 @@
+
+<- Vertex ----------------------------------------------------------------------
+The Vertex class creates a point.
+
+The constructor will instantiate an object from x,y,z,w and the Color class.
+
+The private variables have setters and getters.
+
+Color is a class Color and it will be defined as white if not defined.
+
+x, y , z are coordinates and z will be set to 1.00.
+---------------------------------------------------------------------- Vertex ->
