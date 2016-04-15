@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <style>
+        div {
+
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            line-height: 200px;
+            background: red;
+            color: black;
+            font-size: 400px;
+        }
+
+    </style>
+</head>
+<body>
+<div id="circle" style="width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            line-height: 200px;
+            background: red;
+            color: black;
+            font-size: 400px;">
+</div>
+
+<script>
+    var myCircle = document.getElementById("circle");
+    var radius;
+
+    myCircle.addEventListener("click", function () {
+        radius = parseInt(myCircle.style.width);
+        if (myCircle.style.backgroundColor == 'red')
+            myCircle.style.backgroundColor = 'green';
+        else if (myCircle.style.backgroundColor == "green")
+            myCircle.style.backgroundColor = "blue";
+        else if (myCircle.style.backgroundColor == "blue")
+            myCircle.style.backgroundColor = "red";
+
+        if (radius < 420) {
+            radius = (radius + 10) + "px";
+            myCircle.style.height = radius;
+            myCircle.style.width = radius;
+        }
+        else {
+            radius = 200 + "px";
+            myCircle.style.height = radius;
+            myCircle.style.width = radius;
+        }
+    });
+
+    myCircle.addEventListener("mouseleave", function () {
+        radius = parseInt(myCircle.style.width);
+        if (radius > 200) {
+            radius = (radius - 5) + "px";
+            myCircle.style.height = radius;
+            myCircle.style.width = radius;
+        }
+
+        if (myCircle.style.backgroundColor == 'red')
+            myCircle.style.backgroundColor = 'blue';
+        else if (myCircle.style.backgroundColor == "blue")
+            myCircle.style.backgroundColor = "green";
+        else if (myCircle.style.backgroundColor == "green")
+            myCircle.style.backgroundColor = "red";
+    });
+
+</script>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Balloon</title>
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+    <script type="text/javascript">
+
+    </script>
+</head>
+<body>
+
+<div id="circle" style="height: 200px; width: 200px; background-color: red; border-radius: 1000px;"></div>
+
+<script>
+
+    $(document).ready(function () {
+
+        var size = 200;
+
+        $("#circle").click(function () {
+
+            if ($(this).css("background-color") == "rgb(255, 0, 0)")
+                $(this).css({backgroundColor: 'lawngreen'});
+            else if ($(this).css("background-color") == "rgb(124, 252, 0)")
+                $(this).css({backgroundColor: 'blue'});
+            else if ($(this).css("background-color") == "rgb(0, 0, 255)")
+                $(this).css({backgroundColor: 'red'});
+
+            if (circle.style.height < "420px") {
+                size += 10;
+                $(this).css({height: size + "px"});
+                $(this).css({width: size + "px"});
+            }
+            else {
+                size = 200;
+                $(this).css({height: size + "px"});
+                $(this).css({width: size + "px"});
+            }
+        })
+
+        $("#circle").mouseleave(function () {
+
+            if ($(this).css("background-color") == "rgb(255, 0, 0)")
+                $(this).css({backgroundColor: 'blue'});
+            else if ($(this).css("background-color") == "rgb(124, 252, 0)")
+                $(this).css({backgroundColor: 'red'});
+            else if ($(this).css("background-color") == "rgb(0, 0, 255)")
+                $(this).css({backgroundColor: 'lawngreen'});
+
+            if (circle.style.height > "200px") {
+                size -= 5;
+                $(this).css({height: size + "px"});
+                $(this).css({width: size + "px"});
+            }
+        })
+
+    });
+
+
+</script>
+
+</body>
+</html>

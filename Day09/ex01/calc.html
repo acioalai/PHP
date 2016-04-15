@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+
+<input id="left" type="text" name="left">
+<select id="sign">
+    <option value="+">+</option>
+    <option value="-">-</option>
+    <option value="*">*</option>
+    <option value="/">/</option>
+    <option value="%">%</option>
+</select>
+<input id="right" type="text" name="right">
+<input id="equal" type="submit" name="submit" value="Try me!">
+
+<script>
+    var left = document.getElementById("left");
+    var right = document.getElementById("right");
+    var sign = document.getElementById("sign");
+    var equal = document.getElementById("equal");
+
+    equal.addEventListener("click", function () {
+
+        if (!isNaN(left.value) && !isNaN(right.value)) {
+            var sum = 0;
+
+            var first = parseInt(left.value);
+            var operator = sign.value;
+            var second = parseInt(right.value);
+            if ((first >= 0) && (second >= 0)) {
+                if ((second == 0) && ((operator == '/') || (operator == '%'))
+                ) {
+                    alert("It’s over 9000! ");
+                    console.log("It’s over 9000! ");
+                } else {
+                    sum = eval(first + operator + second);
+                    alert(sum);
+                    console.log(sum);
+                }
+            }
+            else {
+                alert("Error :(");
+            }
+        }
+    });
+
+    setInterval(function(){
+        alert("Please, use me...");
+    }, 30000);
+</script>
+</body>
+</html>
